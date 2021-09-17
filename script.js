@@ -12,7 +12,7 @@ $( ".inner-switch" ).on("click", function() {
 
 // Persisting dark or light mode
 
-const switchButton = document.getElementById('switch');
+const switchButton = document.getElementById('inner-switch');
 const workContainer = document.getElementById('work');
  
 switchButton.addEventListener('click', () => {
