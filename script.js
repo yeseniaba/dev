@@ -12,23 +12,21 @@ $( ".inner-switch" ).on("click", function() {
 
 // Persisting dark or light mode
 
-const switchButton = document.getElementById('inner-switch');
-const workContainer = document.getElementById('work');
- 
-switchButton.addEventListener('click', () => {
-    document.body.classList.toggle('dark'); //toggle the HTML body the class 'dark'
-    switchButton.classList.toggle('active');//toggle the HTML button with the id='switch' with the class 'active''
-    workContainer.classList.toggle('dark');
- 
-    if(document.body.classList.contains('dark')){ //when the body has the class 'dark' currently
-        localStorage.setItem('darkMode', 'enabled'); //store this data if dark mode is on
-    }else{
-        localStorage.setItem('darkMode', 'disabled'); //store this data if dark mode is off
-    }
-});
- 
-if(localStorage.getItem('darkMode') == 'enabled'){
-    document.body.classList.toggle('dark');
-    switchButton.classList.toggle('active');
-    workContainer.classList.toggle('dark');
+// dark mode switch
+var setTheme = function (theme) {
+if (theme === 'dark') {
+// dark
+$( "body" ).removeClass("standard");
+$( "body" ).addClass( "dark" );
+$(".inner-switch").text("ON");
+setCookie('Theme', 'dark', 30);
+} else {
+$("body").removeClass("dark");
+$("body").addClass("standard");
+$(".inner-switch").text("OFF");
+setCookie('Theme', 'standard', 30);
 }
+};
+
+currentTheme = getCookie('Theme');
+setTheme(currentTheme);
