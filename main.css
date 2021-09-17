@@ -73,3 +73,7 @@ margin: 0px;
 text-decoration: overline;
 text-decoration-color: #6495ED;
 }
+
+a {
+  color: none;
+}
