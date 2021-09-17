@@ -41,3 +41,40 @@ img {
     color: #e6e6e6;
     border-color: #e6e6e6;
 }
+
+.topnav {
+  overflow: hidden;
+  background-color: #181818;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 19px;
+  border-radius: 20px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  color: white;
+  text-decoration: underline;
+  text-decoration-color: #6495ED;
+  text-decoration-thickness: 5px;
+  
+}
+
+.topnav > p {
+float:right;
+color: white;
+padding: 10px;
+margin: 0px;
+text-decoration: overline;
+text-decoration-color: #6495ED;
+}
