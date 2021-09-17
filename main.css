@@ -60,7 +60,6 @@ img {
 }
 
 .topnav a.active {
-  color: black;
   text-decoration: underline;
   text-decoration-color: #6495ED;
   text-decoration-thickness: 5px;
