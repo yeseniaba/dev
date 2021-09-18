@@ -1,30 +1,38 @@
-// Set a cookie
+// check for saved 'darkMode' in localStorage
+let darkMode = localStorage.getItem('darkMode'); 
 
-function togglePageContentLightDark() {
-  var body = document.getElementById('body')
-  var currentClass = body.className
-  var newClass = body.className == 'dark-mode' ? 'light-mode' : 'dark-mode'
-  body.className = newClass
+const darkModeToggle = document.querySelector('#dark-mode-toggle');
 
-  // Save the theme preference for 10 years.
-  var endDate = new Date();
-  endDate.setFullYear(endDate.getFullYear() + 10);
-
-  document.cookie = 'theme=' + (newClass == 'light-mode' ? 'light' : 'dark') +
-                    '; Expires=' + endDate + ';'
-  console.log('Cookies are now: ' + document.cookie)
+const enableDarkMode = () => {
+  // 1. Add the class to the body
+  document.body.classList.add('darkmode');
+  // 2. Update darkMode in localStorage
+  localStorage.setItem('darkMode', 'enabled');
 }
 
-// Determines if dark mode is currently selected 
-function isDarkThemeSelected() {
-  return document.cookie.match(/theme=dark/i) != null
+const disableDarkMode = () => {
+  // 1. Remove the class from the body
+  document.body.classList.remove('darkmode');
+  // 2. Update darkMode in localStorage 
+  localStorage.setItem('darkMode', null);
+}
+ 
+// If the user already visited and enabled darkMode
+// start things off with it on
+if (darkMode === 'enabled') {
+  enableDarkMode();
 }
 
-function setThemeFromCookie() {
-  var body = document.getElementById('body')
-  body.className = isDarkThemeSelected() ? 'dark-mode' : 'light-mode'
-}
-
-(function() {
-  setThemeFromCookie()
-})();
+// When someone clicks the button
+darkModeToggle.addEventListener('click', () => {
+  // get their darkMode setting
+  darkMode = localStorage.getItem('darkMode'); 
+  
+  // if it not current enabled, enable it
+  if (darkMode !== 'enabled') {
+    enableDarkMode();
+  // if it has been enabled, turn it off  
+  } else {  
+    disableDarkMode(); 
+  }
+});
