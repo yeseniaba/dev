@@ -12,7 +12,41 @@
 <body>
 <button type="button" name="dark_light" onclick="toggleDarkLight()" title="Toggle dark/light mode">Hi</button>
 	<h1>Hi I'm Yesenia</h1>
-<script src="script.js"></script>
+<script type="text/javascript">
+  function setThemeFromCookie() {
+    var pageContent = document.getElementById('page-content')
+    pageContent.className = isDarkThemeSelected() ? 'page-content' : 'page-content-light'
+  }
+
+  function isDarkThemeSelected() {
+    return document.cookie.match(/theme=dark/i) != null
+  }
+
+  function setLightDarkSwitchState() {
+    document.getElementById('lightDarkSwitchInput').checked = isDarkThemeSelected()
+  }
+
+  function togglePageContentLightDark() {
+    var pageContent = document.getElementById('page-content')
+    var currentClass = pageContent.className;
+    var newClass = pageContent.className == 'page-content' ? 'page-content-light' : 'page-content'
+    pageContent.className = newClass
+
+    // Save the theme preference for 10 years.
+    var endDate = new Date();
+    endDate.setFullYear(endDate.getFullYear() + 10);
+
+    document.cookie = 'theme=' + (newClass == 'page-content-light' ? 'light' : 'dark') +
+                      '; Expires=' + endDate + ';'
+  }
+
+  (function() {
+    setThemeFromCookie()
+    setLightDarkSwitchState()
+    document.getElementById('lightDarkSwitchInput').onchange=togglePageContentLightDark
+  })();
+</script>
+
 
 </body>
 </html>	
