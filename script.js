@@ -1,32 +1,30 @@
-// Creating dark mode toggle
+// Set a cookie
 
-const switchButton = document.getElementById('inner-switch');
- 
-switchButton.addEventListener('click', () => {
-document.body.classList.toggle('dark'); //toggle the HTML body the class 'dark'
-switchButton.classList.toggle('active');
-//toggle the HTML button with the id='switch' with the class 'active'
-});
+function togglePageContentLightDark() {
+  var body = document.getElementById('body')
+  var currentClass = body.className
+  var newClass = body.className == 'dark-mode' ? 'light-mode' : 'dark-mode'
+  body.className = newClass
 
-// Creating local storage
+  // Save the theme preference for 10 years.
+  var endDate = new Date();
+  endDate.setFullYear(endDate.getFullYear() + 10);
 
-const switchButton = document.getElementById('inner-switch');
-const workContainer = document.getElementById('work');
- 
-switchButton.addEventListener('click', () => {
-    document.body.classList.toggle('dark'); //toggle the HTML body the class 'dark'
-    switchButton.classList.toggle('active');//toggle the HTML button with the id='switch' with the class 'active''
-    workContainer.classList.toggle('dark');
- 
-    if(document.body.classList.contains('dark')){ //when the body has the class 'dark' currently
-        localStorage.setItem('darkMode', 'enabled'); //store this data if dark mode is on
-    }else{
-        localStorage.setItem('darkMode', 'disabled'); //store this data if dark mode is off
-    }
-});
- 
-if(localStorage.getItem('darkMode') == 'enabled'){
-    document.body.classList.toggle('dark');
-    switchButton.classList.toggle('active');
-    workContainer.classList.toggle('dark');
+  document.cookie = 'theme=' + (newClass == 'light-mode' ? 'light' : 'dark') +
+                    '; Expires=' + endDate + ';'
+  console.log('Cookies are now: ' + document.cookie)
 }
+
+// Determines if dark mode is currently selected 
+function isDarkThemeSelected() {
+  return document.cookie.match(/theme=dark/i) != null
+}
+
+function setThemeFromCookie() {
+  var body = document.getElementById('body')
+  body.className = isDarkThemeSelected() ? 'dark-mode' : 'light-mode'
+}
+
+(function() {
+  setThemeFromCookie()
+})();
