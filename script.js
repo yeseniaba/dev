@@ -1,6 +1,6 @@
 // Creating dark mode toggle
 
-const switchButton = document.getElementById('switch');
+const switchButton = document.getElementById('inner-switch');
  
 switchButton.addEventListener('click', () => {
 document.body.classList.toggle('dark'); //toggle the HTML body the class 'dark'
@@ -10,7 +10,7 @@ switchButton.classList.toggle('active');
 
 // Creating local storage
 
-const switchButton = document.getElementById('switch');
+const switchButton = document.getElementById('inner-switch');
 const workContainer = document.getElementById('work');
  
 switchButton.addEventListener('click', () => {
