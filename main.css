@@ -126,7 +126,7 @@ h1 {
 .item {
   flex-grow: 1;
   height: 100%;
-  border: 2px;
+  border: 1px;
   border-style: solid;
   padding: 10px;
   border-radius: 3px;
