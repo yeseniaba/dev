@@ -210,16 +210,16 @@ body {margin:25px;}
 }
 
 
-.container {
+.container-resume {
   display: flex;
 }
 
-.item {
+.item-resume {
   flex-grow: 1;
   height: 100px;
 }
 
-.item + .item {
+.item-resume + .item-resume {
   margin-left: 2%;
 }
 
