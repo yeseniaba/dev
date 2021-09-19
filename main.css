@@ -208,3 +208,19 @@ body {margin:25px;}
     text-align: left;
   }
 }
+
+.container-resume {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.item-resume {
+  width: 48%;
+  height: 100px;
+  margin-bottom: 2%;
+}
+
+.item-resume:nth-child(3n) {
+  width: 100%;
+}
