@@ -221,6 +221,6 @@ body {margin:25px;}
   margin-bottom: 2%;
 }
 
-.item-resume:nth-child(3n) {
+.item-resume:nth-child(5n) {
   width: 100%;
 }
