@@ -13,7 +13,6 @@
   --clr-accent: #ff7750;
   --foreground: var(--clr-dark);
   --background: var(--clr-light);
-  --ff-title: serif;
   --ff-body: "Assistant", sans-serif;
 }
 
