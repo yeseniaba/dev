@@ -141,3 +141,16 @@ h1 {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 
 }
+
+.item-second {
+  flex-grow: 1;
+  height: 100%;
+  padding: 10px;
+  width: 33%;
+}
+
+
+.item-second + .item-second {
+  margin-left: 2%;
+
+}
