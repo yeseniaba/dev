@@ -7,7 +7,7 @@
 
 :root {
   --clr-light: white;
-  --clr-dark: #00332a;
+  --clr-dark: #00003A;
   --clr-primary: #dbffa2;
   --clr-secondary: #c3fcf2;
   --clr-accent: #ff7750;
@@ -18,7 +18,7 @@
 
 .darkmode {
   --clr-light: white;
-  --clr-dark: #00332a;
+  --clr-dark: #00003A;
   --clr-primary: #202302;
   --clr-secondary: #00100d;
   --clr-accent: #ff7750;
