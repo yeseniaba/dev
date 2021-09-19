@@ -209,18 +209,17 @@ body {margin:25px;}
   }
 }
 
-.container-resume {
+
+.container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
 }
 
-.item-resume {
-  width: 48%;
+.item {
+  flex-grow: 1;
   height: 100px;
-  margin-bottom: 2%;
 }
 
-.item-resume:nth-child(5n) {
-  width: 100%;
+.item + .item {
+  margin-left: 2%;
 }
+
