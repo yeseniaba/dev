@@ -125,11 +125,12 @@ h1 {
 
 .item {
   flex-grow: 1;
-  height: 100px;
+  height: 100%;
   border: 2px;
   border-style: solid;
   padding: 10px;
   border-radius: 3px;
+  width: 33%;
 }
 
 .item + .item {
