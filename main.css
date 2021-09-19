@@ -126,6 +126,10 @@ h1 {
 .item {
   flex-grow: 1;
   height: 100px;
+  border: 2px;
+  border-style: solid;
+  padding: 10px;
+  border-radius: 3px;
 }
 
 .item + .item {
