@@ -30,7 +30,7 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--ff-body);
-  font-size: 18px;
+  font-size: 24px;
   line-height: 1.6;
 }
 
@@ -70,7 +70,7 @@ h1 {
 }
 
 .btn-accent {
-  background: #FF69B4;
+  background: lightcoral;
   color: var(--foreground);
 }
 
@@ -170,7 +170,7 @@ body {margin:25px;}
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 24px;
 }
 
 .topnav a:hover {
@@ -179,7 +179,7 @@ body {margin:25px;}
 }
 
 .topnav a.active {
-  background-color: #04AA6D;
+  background-color: lightcoral;
   color: white;
 }
 
