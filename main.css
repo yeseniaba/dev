@@ -123,6 +123,10 @@ a {
   margin: 40px;
 }
 
+.about-container {
+  margin: 40px;
+}
+
 .item {
   flex-grow: 1;
   height: 100%;
