@@ -120,6 +120,7 @@ a {
 
 .container {
   display: flex;
+  margin: 40px;
 }
 
 .item {
@@ -210,6 +211,7 @@ body {margin:25px;}
 
 .container-resume {
   display: flex;
+  margin: 40px;
 }
 
 .item-resume {
