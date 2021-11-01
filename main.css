@@ -18,7 +18,7 @@
 
 .darkmode {
   --clr-light: white;
-  --clr-dark: #96DED1;
+  --clr-dark: black;
   --clr-primary: #202302;
   --clr-secondary: #00100d;
   --clr-accent: #ff7750;
@@ -39,6 +39,10 @@ h1 {
   font-family: Calibri;
   margin: 0 0 0.25em;
   line-height: 1;
+}
+
+a {
+  color: #00BFFF;
 }
 
 .subtitle {
@@ -112,12 +116,7 @@ h1 {
   height: 30px;
 }
 
-.click-here {
-  width: 100px;
-  right: 1.5em;
-  position: absolute;
-  top: 3em;
-}
+
 
 .container {
   display: flex;
