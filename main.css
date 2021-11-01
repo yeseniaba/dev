@@ -18,7 +18,7 @@
 
 .darkmode {
   --clr-light: white;
-  --clr-dark: black;
+  --clr-dark: #0f0f0f;
   --clr-primary: #202302;
   --clr-secondary: #00100d;
   --clr-accent: #ff7750;
